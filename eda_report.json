@@ -1,0 +1,232 @@
+{
+ "overview": {
+  "trips": 6500,
+  "first": "2026-01-01",
+  "last": "2026-03-31",
+  "stations": 20,
+  "feedback_items": 300,
+  "calendar_days": 90,
+  "trips_per_day": 72.2,
+  "member_share_pct": 60.0,
+  "mean_duration_min": 17.3,
+  "mean_distance_km": 2.94,
+  "weekend_trip_share_pct": 28.6,
+  "same_station_trips": 340,
+  "same_station_pct": 5.2
+ },
+ "weeks": {
+  "days_per_iso_week": {
+   "1": 4,
+   "2": 7,
+   "3": 7,
+   "4": 7,
+   "5": 7,
+   "6": 7,
+   "7": 7,
+   "8": 7,
+   "9": 7,
+   "10": 7,
+   "11": 7,
+   "12": 7,
+   "13": 7,
+   "14": 2
+  },
+  "complete_weeks": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "partial_weeks": [
+   1,
+   14
+  ],
+  "trips_per_complete_week": {
+   "2": 492,
+   "3": 468,
+   "4": 496,
+   "5": 517,
+   "6": 505,
+   "7": 497,
+   "8": 479,
+   "9": 524,
+   "10": 530,
+   "11": 545,
+   "12": 517,
+   "13": 486
+  }
+ },
+ "demand_shape": {
+  "am_peak_trips": 1698,
+  "am_member_share_pct": 86.0,
+  "hub_stations": [
+   "Raffles Place",
+   "Marina Bay",
+   "Changi Business Park",
+   "Clarke Quay",
+   "one-north",
+   "Tanjong Pagar"
+  ],
+  "am_share_from_hubs_pct_quarter": 87.1,
+  "hub_share_of_all_trips_pct": 44.6,
+  "hourly_departures": {
+   "6": {
+    "Casual": 21,
+    "Member": 7
+   },
+   "7": {
+    "Casual": 37,
+    "Member": 345
+   },
+   "8": {
+    "Casual": 69,
+    "Member": 622
+   },
+   "9": {
+    "Casual": 131,
+    "Member": 494
+   },
+   "10": {
+    "Casual": 154,
+    "Member": 45
+   },
+   "11": {
+    "Casual": 235,
+    "Member": 62
+   },
+   "12": {
+    "Casual": 290,
+    "Member": 405
+   },
+   "13": {
+    "Casual": 352,
+    "Member": 109
+   },
+   "14": {
+    "Casual": 337,
+    "Member": 93
+   },
+   "15": {
+    "Casual": 295,
+    "Member": 93
+   },
+   "16": {
+    "Casual": 252,
+    "Member": 65
+   },
+   "17": {
+    "Casual": 195,
+    "Member": 375
+   },
+   "18": {
+    "Casual": 108,
+    "Member": 661
+   },
+   "19": {
+    "Casual": 62,
+    "Member": 504
+   },
+   "20": {
+    "Casual": 38,
+    "Member": 9
+   },
+   "21": {
+    "Casual": 13,
+    "Member": 6
+   },
+   "22": {
+    "Casual": 14,
+    "Member": 2
+   }
+  }
+ },
+ "hub_net_outflow": {
+  "members": 949,
+  "casual": -35,
+  "weekday": 950,
+  "weekend": -36
+ },
+ "bike_id": {
+  "consecutive_pairs": 5601,
+  "start_elsewhere": 5311,
+  "overlap_in_time": 14,
+  "distinct_bikes": 899
+ },
+ "stations": {
+  "capacity_total": 450,
+  "regions": {
+   "Central": [
+    "Marina Bay",
+    "Orchard",
+    "Bishan",
+    "Paya Lebar",
+    "Serangoon"
+   ],
+   "East": [
+    "Somerset",
+    "Tampines Hub",
+    "Pasir Ris",
+    "one-north",
+    "Buona Vista",
+    "Ang Mo Kio",
+    "HarbourFront"
+   ],
+   "North": [
+    "Bugis",
+    "Changi Business Park"
+   ],
+   "North-East": [
+    "Raffles Place",
+    "Jurong East",
+    "Woodlands"
+   ],
+   "West": [
+    "Tanjong Pagar",
+    "Sentosa",
+    "Clarke Quay"
+   ]
+  }
+ },
+ "feedback": {
+  "by_category": {
+   "App": 91,
+   "Availability": 81,
+   "Bike condition": 69,
+   "Billing": 34,
+   "Other": 25
+  },
+  "by_category_polarity": {
+   "App": {
+    "complaint": 75,
+    "praise": 16
+   },
+   "Availability": {
+    "complaint": 55,
+    "praise": 26
+   },
+   "Bike condition": {
+    "complaint": 54,
+    "praise": 15
+   },
+   "Billing": {
+    "complaint": 34
+   },
+   "Other": {
+    "praise": 25
+   }
+  },
+  "distinct_comment_strings": 18,
+  "unknown_strings": [],
+  "complaints": 218,
+  "complaints_rated_4_5": 61,
+  "complaint_share_rated_4_5_pct": 28.0
+ }
+}

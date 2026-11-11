@@ -1,0 +1,37 @@
+[
+ [
+  "1 What it is for?",
+  "The system ranks our 20 stations each week by how many more bikes leave than arrive, and suggests bike moves.\nIt may not dispatch bikes, set prices, assess staff or use rider-level data.",
+  "NIST Map"
+ ],
+ [
+  "2 What could go wrong?",
+  "It is decision support: moderate impact, low cost and reversible (bikes can be moved back by van).\nEU AI Act (reference only): minimal risk, as no decision is about a person; re-check with counsel if used for staffing or pricing.\nMain risks:\nA wrong number from the AI because of hallucination;\nBad data unnoticed;\nThe method is weaker than it looks, since a fixed list does as well;\nIt favours weekday commuter stations (members' net outflow 949 against -35 for casual riders), so weekend and casual areas may be overlooked;\nTrip times and bike IDs could identify riders (PDPA);\nText hidden in feedback tries to instruct the AI (prompt injection);\nPeople over-trust it or give it too much power.",
+  "NIST · EU · OWASP"
+ ],
+ [
+  "3 Who is responsible; where people stay in?",
+  "The Head of Operations approves each brief.\nThe operations analyst owns the code, thresholds and comment themes.\nA PDPA lead handles any privacy incident.\nHumans stay in the loop for:\nThresholds and themes (business judgement);\nWarnings and odd patterns (morning departures from business-area stations;\nThe data cannot confirm direction);\nBorderline stations (about one flag in three does not persist);\nDispatch (it costs money, and the system sees pressure, not causes);\nAnd new kinds of feedback text (untested).",
+  "NIST Govern · IMDA"
+ ],
+ [
+  "4 Safeguards",
+  "The data check stops the run on 13 kinds of failure.\nThe AI sees only summary results, never trip rows or feedback text; comments are matched against a reviewed list, so injected text stops the run.\nEvery number, table row and move in the brief is checked against the results.\nAccess is read-only, with no power to dispatch.\nCounts below 5 are hidden before sharing outside operations.\nNo AI training on our inputs.",
+  "IMDA · OWASP"
+ ],
+ [
+  "5 Evidence",
+  "25 automated tests pass and 58 independent recalculations match.\n13 of 13 attacks were caught, and a clean run publishes.\nThe rule never uses future data.\nFlags held up 68% of the time (65% on weeks held back) against 21% by chance and 58% for “same as last week”.\nLimits: one quarter of data, no stock or revenue data, and a fixed list does as well.",
+  "NIST Measure · EU"
+ ],
+ [
+  "6 How we will watch it?",
+  "Each week check:\nHas the pattern changed (trips up or down 20%, member share moving 10 points, shifts in station mix, unseen feedback text)?\nOf last week's flags, how many held?\nReview if under 50% for four weeks.\nHow often does the Head of Operations override?\nReview if above one in three.\nEach quarter: rerun the comparisons and leakage tests; seasons are untested.",
+  "NIST Manage · IMDA"
+ ],
+ [
+  "7 If it fails",
+  "The analyst switches the alert off and the team returns to the manual checklist.\nThe Head of Operations decides when to relaunch.\nThe analyst keeps the AI-use log as the work happens.",
+  "All four"
+ ]
+]

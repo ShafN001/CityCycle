@@ -1,0 +1,142 @@
+{
+ "written_utc": "2026-11-10T12:30:44.130065+00:00",
+ "steps": [
+  {
+   "step": "1_ingest",
+   "evidence": {
+    "trips": 6500,
+    "stations": 20,
+    "feedback": 300,
+    "sha_trips": "3779b05f7eda",
+    "sha_stations": "a2f64e53e1d9",
+    "sha_feedback": "337f08b67a9e"
+   }
+  },
+  {
+   "step": "2_eda",
+   "evidence": {
+    "trips_per_day": 72.2,
+    "member_share_pct": 60.0,
+    "partial_weeks": [
+     1,
+     14
+    ],
+    "complete_weeks": 12,
+    "am_share_from_hubs_pct": 87.1
+   }
+  },
+  {
+   "step": "G1_data_contract",
+   "evidence": {
+    "layer": "L1 lexical",
+    "decider": "auto",
+    "result": "PASS",
+    "failed": [],
+    "on_fail": "",
+    "failure_path": ""
+   }
+  },
+  {
+   "step": "3_warnings",
+   "evidence": {
+    "n_warn": 5,
+    "notable_notes": [
+     "bike_id forms a coherent location chain",
+     "same-station round trips",
+     "star rating agrees with comment sentiment",
+     "'Availability' category contains only complaints",
+     "feedback has a station field"
+    ]
+   }
+  },
+  {
+   "step": "4_rules_and_moves",
+   "evidence": {
+    "restock": 6,
+    "surplus": 4,
+    "bikes_to_move": 67
+   }
+  },
+  {
+   "step": "G3_verification",
+   "evidence": {
+    "layer": "L2 behavioural",
+    "decider": "auto",
+    "result": "PASS",
+    "failed": [],
+    "on_fail": "",
+    "failure_path": ""
+   }
+  },
+  {
+   "step": "G2_leakage_baselines",
+   "evidence": {
+    "layer": "L3 distributional",
+    "decider": "auto",
+    "result": "PASS",
+    "failed": [],
+    "on_fail": "",
+    "failure_path": ""
+   }
+  },
+  {
+   "step": "G5_drift",
+   "evidence": {
+    "layer": "L3 distributional",
+    "decider": "human",
+    "result": "PASS",
+    "failed": [],
+    "on_fail": "",
+    "failure_path": ""
+   }
+  },
+  {
+   "step": "7_monitor",
+   "evidence": {
+    "reference_weeks": "2-9",
+    "n_drift": 0,
+    "n_watch": 1,
+    "flag_precision_last_week": 0.6,
+    "notable_notes": [
+     "PSI station net-outflow % (trailing 4 wks)"
+    ]
+   }
+  },
+  {
+   "step": "G4_grounding",
+   "evidence": {
+    "layer": "L2 behavioural",
+    "decider": "auto",
+    "result": "PASS",
+    "failed": [],
+    "on_fail": "",
+    "failure_path": ""
+   }
+  },
+  {
+   "step": "G6_human_approval",
+   "evidence": {
+    "layer": "human",
+    "decider": "human",
+    "result": "FAIL",
+    "failed": [
+     "an accountable approver is named"
+    ],
+    "on_fail": "hold",
+    "failure_path": "HOLD. Nothing is published or dispatched. The system never moves a bike."
+   }
+  },
+  {
+   "step": "10_publish",
+   "evidence": {
+    "status": "HELD_FOR_APPROVAL",
+    "approved_by": "(none)",
+    "open_holds": "none"
+   }
+  }
+ ],
+ "week": 13,
+ "status": "HELD_FOR_APPROVAL",
+ "skip_gates": false,
+ "verification": "gates evaluated"
+}

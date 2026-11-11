@@ -1,0 +1,617 @@
+{
+ "week": {
+  "iso_week": 13,
+  "start": "2026-03-23",
+  "end": "2026-03-29",
+  "trailing_weeks": [
+   10,
+   11,
+   12,
+   13
+  ],
+  "trips": 486,
+  "member_share_pct": 62.8,
+  "am_peak_trips": 132,
+  "am_peak_share_from_urgent_stations_pct": 88.6
+ },
+ "thresholds": {
+  "urgent_pct": 40.0,
+  "surplus_pct": 25.0,
+  "trail_weeks": 4,
+  "am_start": 7,
+  "am_end": 10
+ },
+ "data_gate": [
+  {
+   "check": "schema: trips columns",
+   "status": "PASS",
+   "detail": []
+  },
+  {
+   "check": "schema: stations/feedback columns",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "no nulls (trips, stations, feedback)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "trip_id unique",
+   "status": "PASS",
+   "detail": 0
+  },
+  {
+   "check": "feedback_id unique",
+   "status": "PASS",
+   "detail": 0
+  },
+  {
+   "check": "station keys match master",
+   "status": "PASS",
+   "detail": []
+  },
+  {
+   "check": "end after start",
+   "status": "PASS",
+   "detail": 0
+  },
+  {
+   "check": "duration_min equals end-start",
+   "status": "PASS",
+   "detail": 0
+  },
+  {
+   "check": "duration in 1-180 min; distance > 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "user_type in {Member, Casual}",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "capacity positive",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "rating in 1-5",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "feedback comments all in reviewed theme table",
+   "status": "PASS",
+   "detail": []
+  },
+  {
+   "check": "bike_id forms a coherent location chain",
+   "status": "WARN",
+   "detail": "5311 of 5601 consecutive trips start somewhere other than the bike's last drop-off (95%); 14 overlap in time -> bike_id not used for location"
+  },
+  {
+   "check": "same-station round trips",
+   "status": "WARN",
+   "detail": "5.2% of trips start and end at one station (kept; they net to zero)"
+  },
+  {
+   "check": "star rating agrees with comment sentiment",
+   "status": "WARN",
+   "detail": "28% of complaint comments carry a 4-5 star rating -> ratings not used as a sentiment signal"
+  },
+  {
+   "check": "'Availability' category contains only complaints",
+   "status": "WARN",
+   "detail": "26 of 81 Availability items are praise -> classify by comment, not category"
+  },
+  {
+   "check": "feedback has a station field",
+   "status": "WARN",
+   "detail": "free text only; cannot be joined to a station except where Bishan is named"
+  }
+ ],
+ "stations": [
+  {
+   "rank": 1,
+   "station": "Raffles Place",
+   "region": "North-East",
+   "capacity": 15,
+   "departures": 35,
+   "arrivals": 19,
+   "net_outflow": 16,
+   "net_pct_this_week": 106.7,
+   "net_pct_4wk_mean": 61.7,
+   "net_bikes_per_week_4wk": 9.2,
+   "weeks_over_urgent_of_4": 3,
+   "am_peak_departures": 18,
+   "status": "RESTOCK - urgent"
+  },
+  {
+   "rank": 2,
+   "station": "Marina Bay",
+   "region": "Central",
+   "capacity": 20,
+   "departures": 39,
+   "arrivals": 27,
+   "net_outflow": 12,
+   "net_pct_this_week": 60.0,
+   "net_pct_4wk_mean": 60.0,
+   "net_bikes_per_week_4wk": 12.0,
+   "weeks_over_urgent_of_4": 4,
+   "am_peak_departures": 18,
+   "status": "RESTOCK - urgent"
+  },
+  {
+   "rank": 3,
+   "station": "Changi Business Park",
+   "region": "North",
+   "capacity": 30,
+   "departures": 42,
+   "arrivals": 24,
+   "net_outflow": 18,
+   "net_pct_this_week": 60.0,
+   "net_pct_4wk_mean": 56.7,
+   "net_bikes_per_week_4wk": 17.0,
+   "weeks_over_urgent_of_4": 3,
+   "am_peak_departures": 23,
+   "status": "RESTOCK - urgent"
+  },
+  {
+   "rank": 4,
+   "station": "Clarke Quay",
+   "region": "West",
+   "capacity": 30,
+   "departures": 29,
+   "arrivals": 24,
+   "net_outflow": 5,
+   "net_pct_this_week": 16.7,
+   "net_pct_4wk_mean": 45.0,
+   "net_bikes_per_week_4wk": 13.5,
+   "weeks_over_urgent_of_4": 3,
+   "am_peak_departures": 17,
+   "status": "RESTOCK - urgent"
+  },
+  {
+   "rank": 5,
+   "station": "one-north",
+   "region": "East",
+   "capacity": 20,
+   "departures": 31,
+   "arrivals": 25,
+   "net_outflow": 6,
+   "net_pct_this_week": 30.0,
+   "net_pct_4wk_mean": 43.8,
+   "net_bikes_per_week_4wk": 8.8,
+   "weeks_over_urgent_of_4": 2,
+   "am_peak_departures": 19,
+   "status": "RESTOCK - urgent"
+  },
+  {
+   "rank": 6,
+   "station": "Tanjong Pagar",
+   "region": "West",
+   "capacity": 15,
+   "departures": 39,
+   "arrivals": 27,
+   "net_outflow": 12,
+   "net_pct_this_week": 80.0,
+   "net_pct_4wk_mean": 40.0,
+   "net_bikes_per_week_4wk": 6.0,
+   "weeks_over_urgent_of_4": 3,
+   "am_peak_departures": 22,
+   "status": "RESTOCK - urgent"
+  },
+  {
+   "rank": 7,
+   "station": "HarbourFront",
+   "region": "East",
+   "capacity": 30,
+   "departures": 22,
+   "arrivals": 32,
+   "net_outflow": -10,
+   "net_pct_this_week": -33.3,
+   "net_pct_4wk_mean": 2.5,
+   "net_bikes_per_week_4wk": 0.8,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 1,
+   "status": "WATCH - dock-full"
+  },
+  {
+   "rank": 8,
+   "station": "Ang Mo Kio",
+   "region": "East",
+   "capacity": 20,
+   "departures": 19,
+   "arrivals": 22,
+   "net_outflow": -3,
+   "net_pct_this_week": -15.0,
+   "net_pct_4wk_mean": -1.2,
+   "net_bikes_per_week_4wk": -0.2,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 1,
+   "status": "OK"
+  },
+  {
+   "rank": 9,
+   "station": "Tampines Hub",
+   "region": "East",
+   "capacity": 15,
+   "departures": 21,
+   "arrivals": 20,
+   "net_outflow": 1,
+   "net_pct_this_week": 6.7,
+   "net_pct_4wk_mean": -3.3,
+   "net_bikes_per_week_4wk": -0.5,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 0,
+   "status": "OK"
+  },
+  {
+   "rank": 10,
+   "station": "Buona Vista",
+   "region": "East",
+   "capacity": 30,
+   "departures": 16,
+   "arrivals": 21,
+   "net_outflow": -5,
+   "net_pct_this_week": -16.7,
+   "net_pct_4wk_mean": -11.7,
+   "net_bikes_per_week_4wk": -3.5,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 0,
+   "status": "OK"
+  },
+  {
+   "rank": 11,
+   "station": "Pasir Ris",
+   "region": "East",
+   "capacity": 15,
+   "departures": 24,
+   "arrivals": 19,
+   "net_outflow": 5,
+   "net_pct_this_week": 33.3,
+   "net_pct_4wk_mean": -13.3,
+   "net_bikes_per_week_4wk": -2.0,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 3,
+   "status": "OK"
+  },
+  {
+   "rank": 12,
+   "station": "Jurong East",
+   "region": "North-East",
+   "capacity": 15,
+   "departures": 22,
+   "arrivals": 18,
+   "net_outflow": 4,
+   "net_pct_this_week": 26.7,
+   "net_pct_4wk_mean": -15.0,
+   "net_bikes_per_week_4wk": -2.2,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 1,
+   "status": "OK"
+  },
+  {
+   "rank": 13,
+   "station": "Bishan",
+   "region": "Central",
+   "capacity": 30,
+   "departures": 17,
+   "arrivals": 28,
+   "net_outflow": -11,
+   "net_pct_this_week": -36.7,
+   "net_pct_4wk_mean": -21.7,
+   "net_bikes_per_week_4wk": -6.5,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 1,
+   "status": "WATCH - dock-full"
+  },
+  {
+   "rank": 14,
+   "station": "Somerset",
+   "region": "East",
+   "capacity": 25,
+   "departures": 13,
+   "arrivals": 23,
+   "net_outflow": -10,
+   "net_pct_this_week": -40.0,
+   "net_pct_4wk_mean": -23.0,
+   "net_bikes_per_week_4wk": -5.8,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 3,
+   "status": "WATCH - dock-full"
+  },
+  {
+   "rank": 15,
+   "station": "Bugis",
+   "region": "North",
+   "capacity": 25,
+   "departures": 12,
+   "arrivals": 24,
+   "net_outflow": -12,
+   "net_pct_this_week": -48.0,
+   "net_pct_4wk_mean": -24.0,
+   "net_bikes_per_week_4wk": -6.0,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 1,
+   "status": "WATCH - dock-full"
+  },
+  {
+   "rank": 16,
+   "station": "Woodlands",
+   "region": "North-East",
+   "capacity": 25,
+   "departures": 33,
+   "arrivals": 31,
+   "net_outflow": 2,
+   "net_pct_this_week": 8.0,
+   "net_pct_4wk_mean": -24.0,
+   "net_bikes_per_week_4wk": -6.0,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 2,
+   "status": "OK"
+  },
+  {
+   "rank": 17,
+   "station": "Sentosa",
+   "region": "West",
+   "capacity": 30,
+   "departures": 20,
+   "arrivals": 28,
+   "net_outflow": -8,
+   "net_pct_this_week": -26.7,
+   "net_pct_4wk_mean": -30.8,
+   "net_bikes_per_week_4wk": -9.2,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 1,
+   "status": "SURPLUS - donor / dock-full risk"
+  },
+  {
+   "rank": 18,
+   "station": "Orchard",
+   "region": "Central",
+   "capacity": 15,
+   "departures": 19,
+   "arrivals": 19,
+   "net_outflow": 0,
+   "net_pct_this_week": 0.0,
+   "net_pct_4wk_mean": -31.7,
+   "net_bikes_per_week_4wk": -4.8,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 0,
+   "status": "SURPLUS - donor / dock-full risk"
+  },
+  {
+   "rank": 19,
+   "station": "Serangoon",
+   "region": "Central",
+   "capacity": 25,
+   "departures": 18,
+   "arrivals": 27,
+   "net_outflow": -9,
+   "net_pct_this_week": -36.0,
+   "net_pct_4wk_mean": -35.0,
+   "net_bikes_per_week_4wk": -8.8,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 1,
+   "status": "SURPLUS - donor / dock-full risk"
+  },
+  {
+   "rank": 20,
+   "station": "Paya Lebar",
+   "region": "Central",
+   "capacity": 20,
+   "departures": 15,
+   "arrivals": 28,
+   "net_outflow": -13,
+   "net_pct_this_week": -65.0,
+   "net_pct_4wk_mean": -58.8,
+   "net_bikes_per_week_4wk": -11.8,
+   "weeks_over_urgent_of_4": 0,
+   "am_peak_departures": 0,
+   "status": "SURPLUS - donor / dock-full risk"
+  }
+ ],
+ "restock_need_bikes_per_week": {
+  "Raffles Place": 9,
+  "Marina Bay": 12,
+  "Changi Business Park": 17,
+  "Clarke Quay": 14,
+  "one-north": 9,
+  "Tanjong Pagar": 6
+ },
+ "donor_capacity_bikes_per_week": {
+  "Buona Vista": 4,
+  "Pasir Ris": 2,
+  "Jurong East": 2,
+  "Bishan": 6,
+  "Somerset": 6,
+  "Bugis": 6,
+  "Woodlands": 6,
+  "Sentosa": 9,
+  "Orchard": 5,
+  "Serangoon": 9,
+  "Paya Lebar": 12
+ },
+ "moves": [
+  {
+   "from_station": "Paya Lebar",
+   "to_station": "Changi Business Park",
+   "bikes": 12,
+   "donor_tier": 1
+  },
+  {
+   "from_station": "Sentosa",
+   "to_station": "Changi Business Park",
+   "bikes": 5,
+   "donor_tier": 1
+  },
+  {
+   "from_station": "Serangoon",
+   "to_station": "Clarke Quay",
+   "bikes": 9,
+   "donor_tier": 1
+  },
+  {
+   "from_station": "Orchard",
+   "to_station": "Clarke Quay",
+   "bikes": 5,
+   "donor_tier": 1
+  },
+  {
+   "from_station": "Sentosa",
+   "to_station": "Marina Bay",
+   "bikes": 4,
+   "donor_tier": 1
+  },
+  {
+   "from_station": "Bishan",
+   "to_station": "Marina Bay",
+   "bikes": 6,
+   "donor_tier": 2
+  },
+  {
+   "from_station": "Somerset",
+   "to_station": "Marina Bay",
+   "bikes": 2,
+   "donor_tier": 2
+  },
+  {
+   "from_station": "Bugis",
+   "to_station": "Raffles Place",
+   "bikes": 6,
+   "donor_tier": 2
+  },
+  {
+   "from_station": "Woodlands",
+   "to_station": "Raffles Place",
+   "bikes": 3,
+   "donor_tier": 2
+  },
+  {
+   "from_station": "Buona Vista",
+   "to_station": "one-north",
+   "bikes": 4,
+   "donor_tier": 2
+  },
+  {
+   "from_station": "Somerset",
+   "to_station": "one-north",
+   "bikes": 4,
+   "donor_tier": 2
+  },
+  {
+   "from_station": "Woodlands",
+   "to_station": "one-north",
+   "bikes": 1,
+   "donor_tier": 2
+  },
+  {
+   "from_station": "Pasir Ris",
+   "to_station": "Tanjong Pagar",
+   "bikes": 2,
+   "donor_tier": 2
+  },
+  {
+   "from_station": "Jurong East",
+   "to_station": "Tanjong Pagar",
+   "bikes": 2,
+   "donor_tier": 2
+  },
+  {
+   "from_station": "Woodlands",
+   "to_station": "Tanjong Pagar",
+   "bikes": 2,
+   "donor_tier": 2
+  }
+ ],
+ "total_bikes_to_move": 67,
+ "bikes_from_tier1_donors": 35,
+ "bikes_from_tier2_donors": 32,
+ "unmet_bikes": 0,
+ "feedback": {
+  "total": 300,
+  "availability_category_items": 81,
+  "availability_complaints": 55,
+  "availability_praise": 26,
+  "morning_no_bikes": 27,
+  "peak_no_bikes": 16,
+  "docks_full": 12,
+  "bishan_praise": 26,
+  "complaints_total": 218,
+  "complaints_rated_4_5": 61,
+  "top_complaint_themes": {
+   "App GPS": 27,
+   "No bikes (morning)": 27,
+   "App crash": 25,
+   "Double charge": 23,
+   "Payment failed": 23
+  },
+  "items_in_target_week": 21,
+  "availability_items_in_target_week": 5,
+  "by_category_polarity": {
+   "App": {
+    "complaint": 75,
+    "praise": 16
+   },
+   "Availability": {
+    "complaint": 55,
+    "praise": 26
+   },
+   "Bike condition": {
+    "complaint": 54,
+    "praise": 15
+   },
+   "Billing": {
+    "complaint": 34
+   },
+   "Other": {
+    "praise": 25
+   }
+  },
+  "theme_counts": {
+   "App GPS": 27,
+   "No bikes (morning)": 27,
+   "Bikes available (Bishan)": 26,
+   "App crash": 25,
+   "Bike condition ok": 23,
+   "Double charge": 23,
+   "Payment failed": 23,
+   "Brakes": 20,
+   "Flat tyre": 17,
+   "App ease": 16,
+   "No bikes (peak)": 16,
+   "Docks full": 12,
+   "Late fee": 11,
+   "Seat": 11,
+   "Convenience": 9,
+   "Value": 8,
+   "Gears": 6
+  }
+ },
+ "backtest": {
+  "A_single_week": {
+   "precision": 0.58,
+   "recall": 0.62,
+   "flagged": 36,
+   "hits": 21,
+   "actual": 34
+  },
+  "B_4wk_mean": {
+   "precision": 0.68,
+   "recall": 0.76,
+   "flagged": 38,
+   "hits": 26,
+   "actual": 34
+  }
+ },
+ "quarter": {
+  "trips": 6500,
+  "complete_weeks": 12,
+  "first": "2026-01-01",
+  "last": "2026-03-31"
+ }
+}

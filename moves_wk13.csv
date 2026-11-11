@@ -1,0 +1,16 @@
+from_station,to_station,bikes,donor_tier
+Paya Lebar,Changi Business Park,12,1
+Sentosa,Changi Business Park,5,1
+Serangoon,Clarke Quay,9,1
+Orchard,Clarke Quay,5,1
+Sentosa,Marina Bay,4,1
+Bishan,Marina Bay,6,2
+Somerset,Marina Bay,2,2
+Bugis,Raffles Place,6,2
+Woodlands,Raffles Place,3,2
+Buona Vista,one-north,4,2
+Somerset,one-north,4,2
+Woodlands,one-north,1,2
+Pasir Ris,Tanjong Pagar,2,2
+Jurong East,Tanjong Pagar,2,2
+Woodlands,Tanjong Pagar,2,2

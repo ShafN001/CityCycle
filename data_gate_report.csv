@@ -1,0 +1,19 @@
+check,status,detail
+schema: trips columns,PASS,[]
+schema: stations/feedback columns,PASS,
+"no nulls (trips, stations, feedback)",PASS,
+trip_id unique,PASS,0
+feedback_id unique,PASS,0
+station keys match master,PASS,[]
+end after start,PASS,0
+duration_min equals end-start,PASS,0
+duration in 1-180 min; distance > 0,PASS,
+"user_type in {Member, Casual}",PASS,
+capacity positive,PASS,
+rating in 1-5,PASS,
+feedback comments all in reviewed theme table,PASS,[]
+bike_id forms a coherent location chain,WARN,5311 of 5601 consecutive trips start somewhere other than the bike's last drop-off (95%); 14 overlap in time -> bike_id not used for location
+same-station round trips,WARN,5.2% of trips start and end at one station (kept; they net to zero)
+star rating agrees with comment sentiment,WARN,28% of complaint comments carry a 4-5 star rating -> ratings not used as a sentiment signal
+'Availability' category contains only complaints,WARN,"26 of 81 Availability items are praise -> classify by comment, not category"
+feedback has a station field,WARN,free text only; cannot be joined to a station except where Bishan is named

@@ -1,0 +1,21 @@
+rank,station,region,capacity,departures,arrivals,net_outflow,net_pct_this_week,net_pct_4wk_mean,net_bikes_per_week_4wk,weeks_over_urgent_of_4,am_peak_departures,status
+1,Raffles Place,North-East,15,35,19,16,106.7,61.7,9.2,3,18,RESTOCK - urgent
+2,Marina Bay,Central,20,39,27,12,60.0,60.0,12.0,4,18,RESTOCK - urgent
+3,Changi Business Park,North,30,42,24,18,60.0,56.7,17.0,3,23,RESTOCK - urgent
+4,Clarke Quay,West,30,29,24,5,16.7,45.0,13.5,3,17,RESTOCK - urgent
+5,one-north,East,20,31,25,6,30.0,43.8,8.8,2,19,RESTOCK - urgent
+6,Tanjong Pagar,West,15,39,27,12,80.0,40.0,6.0,3,22,RESTOCK - urgent
+7,HarbourFront,East,30,22,32,-10,-33.3,2.5,0.8,0,1,WATCH - dock-full
+8,Ang Mo Kio,East,20,19,22,-3,-15.0,-1.2,-0.2,0,1,OK
+9,Tampines Hub,East,15,21,20,1,6.7,-3.3,-0.5,0,0,OK
+10,Buona Vista,East,30,16,21,-5,-16.7,-11.7,-3.5,0,0,OK
+11,Pasir Ris,East,15,24,19,5,33.3,-13.3,-2.0,0,3,OK
+12,Jurong East,North-East,15,22,18,4,26.7,-15.0,-2.2,0,1,OK
+13,Bishan,Central,30,17,28,-11,-36.7,-21.7,-6.5,0,1,WATCH - dock-full
+14,Somerset,East,25,13,23,-10,-40.0,-23.0,-5.8,0,3,WATCH - dock-full
+15,Bugis,North,25,12,24,-12,-48.0,-24.0,-6.0,0,1,WATCH - dock-full
+16,Woodlands,North-East,25,33,31,2,8.0,-24.0,-6.0,0,2,OK
+17,Sentosa,West,30,20,28,-8,-26.7,-30.8,-9.2,0,1,SURPLUS - donor / dock-full risk
+18,Orchard,Central,15,19,19,0,0.0,-31.7,-4.8,0,0,SURPLUS - donor / dock-full risk
+19,Serangoon,Central,25,18,27,-9,-36.0,-35.0,-8.8,0,1,SURPLUS - donor / dock-full risk
+20,Paya Lebar,Central,20,15,28,-13,-65.0,-58.8,-11.8,0,0,SURPLUS - donor / dock-full risk

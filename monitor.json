@@ -1,0 +1,209 @@
+{
+ "week": 13,
+ "leakage": {
+  "look_ahead_status_unchanged_when_future_deleted": true,
+  "latest_trip_used_after_week_end": false,
+  "best_rule_precision": 0.68,
+  "persistence_precision": 0.58,
+  "leak_suspect_threshold": 0.95,
+  "null_cells_trips_feedback": 0,
+  "duplicate_trip_ids": 0,
+  "duplicate_rows": 0,
+  "selection_split_disjoint": true,
+  "rule_chosen_on_early_weeks": "mean4",
+  "held_out_precision": 0.65,
+  "held_out_flagged": 23,
+  "held_out_beats_chance": true,
+  "allowed_columns": [
+   "start_time",
+   "start_station",
+   "end_station",
+   "capacity"
+  ]
+ },
+ "baselines": {
+  "eval_weeks": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "station_weeks": 160,
+  "base_rate": 0.21,
+  "chance": {
+   "precision": 0.21,
+   "recall": 0.21
+  },
+  "never_flag": {
+   "precision": null,
+   "recall": 0.0
+  },
+  "persistence": {
+   "flagged": 36,
+   "hits": 21,
+   "actual": 34,
+   "precision": 0.58,
+   "recall": 0.62
+  },
+  "frozen_list": {
+   "flagged": 20,
+   "hits": 15,
+   "actual": 18,
+   "precision": 0.75,
+   "recall": 0.83
+  },
+  "mean4": {
+   "flagged": 38,
+   "hits": 26,
+   "actual": 34,
+   "precision": 0.68,
+   "recall": 0.76
+  },
+  "mean4_same_weeks_as_frozen": {
+   "flagged": 19,
+   "hits": 14,
+   "actual": 18,
+   "precision": 0.74,
+   "recall": 0.78
+  },
+  "persistence_same_weeks_as_frozen": {
+   "flagged": 17,
+   "hits": 11,
+   "actual": 18,
+   "precision": 0.65,
+   "recall": 0.61
+  },
+  "lift_over_chance": 3.2
+ },
+ "selection_split": {
+  "train_outcome_weeks": [
+   6,
+   7,
+   8
+  ],
+  "test_outcome_weeks": [
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "train_scores": {
+   "single_week": {
+    "flagged": 15,
+    "hits": 9,
+    "actual": 13,
+    "precision": 0.6,
+    "recall": 0.69
+   },
+   "mean4": {
+    "flagged": 15,
+    "hits": 11,
+    "actual": 13,
+    "precision": 0.73,
+    "recall": 0.85
+   }
+  },
+  "chosen_on_train": "mean4",
+  "held_out": {
+   "flagged": 23,
+   "hits": 15,
+   "actual": 21,
+   "precision": 0.65,
+   "recall": 0.71
+  },
+  "disjoint": true
+ },
+ "drift": [
+  {
+   "metric": "weekly trips deviation from reference mean",
+   "value": 2.262,
+   "watch": 10.0,
+   "drift": 20.0,
+   "unit": "%",
+   "status": "OK"
+  },
+  {
+   "metric": "member share shift",
+   "value": 2.752,
+   "watch": 5.0,
+   "drift": 10.0,
+   "unit": "pp",
+   "status": "OK"
+  },
+  {
+   "metric": "PSI hour-of-day departures",
+   "value": 0.04,
+   "watch": 0.1,
+   "drift": 0.25,
+   "unit": "",
+   "status": "OK"
+  },
+  {
+   "metric": "PSI start-station mix",
+   "value": 0.043,
+   "watch": 0.1,
+   "drift": 0.25,
+   "unit": "",
+   "status": "OK"
+  },
+  {
+   "metric": "PSI station net-outflow % (trailing 4 wks)",
+   "value": 0.16,
+   "watch": 0.1,
+   "drift": 0.25,
+   "unit": "",
+   "status": "WATCH"
+  },
+  {
+   "metric": "KS trip duration (p-value)",
+   "value": 0.164,
+   "watch": 0.05,
+   "drift": 0.01,
+   "unit": "p",
+   "status": "OK"
+  },
+  {
+   "metric": "unrecognised feedback strings",
+   "value": 0,
+   "watch": 0,
+   "drift": 0,
+   "unit": "count",
+   "status": "OK"
+  }
+ ],
+ "drift_reference_weeks": [
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "noise_floor": {
+  "max_psi_station_mix": 0.091,
+  "mean_psi_station_mix": 0.051
+ },
+ "rolling_flag_precision": {
+  "week": 13,
+  "flagged": 5,
+  "still_over": 3,
+  "precision": 0.6
+ },
+ "thresholds": {
+  "psi_watch": 0.1,
+  "psi_drift": 0.25,
+  "volume_band_pct": 20.0,
+  "member_share_pp": 10.0,
+  "ks_alpha": 0.01,
+  "leak_suspect": 0.95,
+  "precision_floor": 0.5,
+  "ref_first_weeks": 8
+ }
+}

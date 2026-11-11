@@ -1,0 +1,8 @@
+metric,value,watch,drift,unit,status
+weekly trips deviation from reference mean,2.262,10.0,20.0,%,OK
+member share shift,2.752,5.0,10.0,pp,OK
+PSI hour-of-day departures,0.04,0.1,0.25,,OK
+PSI start-station mix,0.043,0.1,0.25,,OK
+PSI station net-outflow % (trailing 4 wks),0.16,0.1,0.25,,WATCH
+KS trip duration (p-value),0.164,0.05,0.01,p,OK
+unrecognised feedback strings,0.0,0.0,0.0,count,OK

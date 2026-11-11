@@ -1,0 +1,10 @@
+from_station,to_station,bikes,donor_tier
+Serangoon,Changi Business Park,14,1
+Tampines Hub,Changi Business Park,6,1
+Bishan,Raffles Place,10,1
+Pasir Ris,Raffles Place,8,1
+Orchard,Marina Bay,8,1
+Tampines Hub,Marina Bay,6,1
+Pasir Ris,Tanjong Pagar,2,1
+Sentosa,Tanjong Pagar,6,2
+Buona Vista,Tanjong Pagar,3,2

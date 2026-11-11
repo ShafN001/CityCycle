@@ -1,0 +1,60 @@
+PASS total trips 6500 6500
+PASS week13 trips 486 486
+PASS AM-peak share from urgent stations (%) 88.64 88.6
+PASS Raffles Place wk13 net outflow 16 16
+PASS Raffles Place 4wk mean % 61.67 61.7
+PASS Marina Bay wk13 net outflow 12 12
+PASS Marina Bay 4wk mean % 60.0 60.0
+PASS Changi Business Park wk13 net outflow 18 18
+PASS Changi Business Park 4wk mean % 56.67 56.7
+PASS Clarke Quay wk13 net outflow 5 5
+PASS Clarke Quay 4wk mean % 45.0 45.0
+PASS one-north wk13 net outflow 6 6
+PASS one-north 4wk mean % 43.75 43.8
+PASS Tanjong Pagar wk13 net outflow 12 12
+PASS Tanjong Pagar 4wk mean % 40.0 40.0
+PASS HarbourFront wk13 net outflow -10 -10
+PASS HarbourFront 4wk mean % 2.5 2.5
+PASS Ang Mo Kio wk13 net outflow -3 -3
+PASS Ang Mo Kio 4wk mean % -1.25 -1.2
+PASS Tampines Hub wk13 net outflow 1 1
+PASS Tampines Hub 4wk mean % -3.33 -3.3
+PASS Buona Vista wk13 net outflow -5 -5
+PASS Buona Vista 4wk mean % -11.67 -11.7
+PASS Pasir Ris wk13 net outflow 5 5
+PASS Pasir Ris 4wk mean % -13.33 -13.3
+PASS Jurong East wk13 net outflow 4 4
+PASS Jurong East 4wk mean % -15.0 -15.0
+PASS Bishan wk13 net outflow -11 -11
+PASS Bishan 4wk mean % -21.67 -21.7
+PASS Somerset wk13 net outflow -10 -10
+PASS Somerset 4wk mean % -23.0 -23.0
+PASS Bugis wk13 net outflow -12 -12
+PASS Bugis 4wk mean % -24.0 -24.0
+PASS Woodlands wk13 net outflow 2 2
+PASS Woodlands 4wk mean % -24.0 -24.0
+PASS Sentosa wk13 net outflow -8 -8
+PASS Sentosa 4wk mean % -30.83 -30.8
+PASS Orchard wk13 net outflow 0 0
+PASS Orchard 4wk mean % -31.67 -31.7
+PASS Serangoon wk13 net outflow -9 -9
+PASS Serangoon 4wk mean % -35.0 -35.0
+PASS Paya Lebar wk13 net outflow -13 -13
+PASS Paya Lebar 4wk mean % -58.75 -58.8
+PASS net flows sum to zero (wk13) 0 0
+PASS donor capacity covers restock need (need, min(need, capacity)) 67 67
+PASS bikes moved == need 67 67
+PASS morning no-bikes 27 27
+PASS peak no-bikes 16 16
+PASS docks full 12 12
+PASS Bishan praise 26 26
+PASS Availability items 81 81
+PASS backtest precision (rule B) 0.68 0.68
+PASS backtest recall (rule B) 0.76 0.76
+PASS persistence precision 0.58 0.58
+PASS base rate (chance precision) 0.21 0.21
+PASS frozen-list precision 0.75 0.75
+PASS held-out precision (rule chosen on weeks<=8, scored on outcome weeks 9-13) 0.65 0.65
+PASS held-out flags 23 23
+
+ALL INDEPENDENT CHECKS PASS

@@ -1,0 +1,16 @@
+DEFENDED     | B1 duplicate trip_id | expect: G1 stops | got: STOPPED
+DEFENDED     | B2 unknown station name (typo) | expect: G1 stops | got: STOPPED
+DEFENDED     | B3 zero-length trip | expect: G1 stops | got: STOPPED
+DEFENDED     | B4 prompt-injection text in feedback | expect: G1 stops; text never reaches the model | got: STOPPED
+DEFENDED     | B5 silent truncation (40% of last week's trips missing; G1 cannot see it) | expect: G1 passes, G5 flags DRIFT | got: G1=PASS, G5=FAIL
+DEFENDED     | B6 altered numbers in the brief (88.6->91.3, 67->71) | expect: G4 flags both | got: ['71', '91.3']
+DEFENDED     | B7 valid numbers attached to the wrong station | expect: number-only check passes (blind spot), row check catches it | got: number-only=pass, row-check mismatches=2
+DEFENDED     | B8 move re-routed to a different receiver | expect: G4 move check catches it | got: 2 mismatches
+DEFENDED     | B9 tampered move plan (+30 bikes from one donor) | expect: G3 conservation/capacity fails | got: 2 criteria failed
+DEFENDED     | B10 look-ahead leak (rule reads next week's value) | expect: G2 flags a too-good rule | got: precision=1.0, failed=1
+DEFENDED     | B11 distribution shift (70% of members' trips vanish) | expect: G5 flags DRIFT | got: FAIL
+DEFENDED     | B12 no named approver | expect: G6 holds; nothing published | got: HELD_FOR_APPROVAL
+DEFENDED     | B13 skip_gates=True with an approver | expect: run stamped UNVERIFIED; nothing published | got: HELD_FOR_APPROVAL
+DEFENDED     | C0 control: clean data, approved brief | expect: PUBLISHED | got: PUBLISHED
+
+13/13 attacks defended; control passed
